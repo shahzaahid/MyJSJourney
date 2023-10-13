@@ -6,7 +6,7 @@ console.log(2 + 2);
 console.log(2 * 2);
 console.log(2 / 2);
 console.log(2 - 2);
-console.log(2 ** 3);
+console.log(2 ** 4);
 console.log(10 % 3);
 console.log("-----------------------------------------------\n\n");
 //with  before double quote it is going to get as it is "
