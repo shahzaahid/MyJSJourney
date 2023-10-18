@@ -20,17 +20,20 @@ map.set("Ka", "Kashmir");
 map.set("USA", "United States of America");
 map.set("Fr", "France");
 map.set("Ka", "Kashmir");
-// the above one is not going to get reflected as it is not getting the duplicate values
+// the above one line is not going to get reflected as it is not getting the duplicate values
 console.log(map);
 
 for (const key of map) {
   console.log(key);
 }
-//will give you array
+//when you are going to try to print the map using the for of loop ti will give you the key value pair values in
+//array and it will make seprate array for each key value
+//suppose if you have three key values and will output three array with the key value pair
 
 for (const [key, value] of map) {
   console.log(key, ":-", value);
 }
+//if you use the key and vale in the for [] it will give you the key value pair
 
 const myObject = {
   Game1: "Nfs",
