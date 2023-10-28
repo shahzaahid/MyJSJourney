@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chai aur code</title>
+  </head>
+  <body style="background-color: #212121; color: #fff"></body>
+  <script>
+    //important lession
+    //how to create the element
+    // const dive = document.createElement("h1");
+    const div = document.createElement("div");
+    div.className = "main";
+    div.id = Math.round(Math.random() * 10 + 1);
+    //there are some by default attribute like id and className but if yo want to do something beyond you have
+    //to do some extra things
+    div.setAttribute("title", "generated title");
+    //you can do it with the key value pair
+    div.style.backgroundColor = "green";
+    div.style.padding = "12px";
+    div.style.margin = "20px";
+    div.style.textAlign = "center";
+    // div.innerText = "chai aur code";
+    //but in books and talks you can hear optimization setAttribute is more acceptable
+    //because dive.innerText and div.style.padding etc they are overwriting the value
+    //firt they get the value and then apply the new value(it take the reference first then put )
+    //but set it directly set the
+    const addText = document.createTextNode("Chaai aur code");
+    div.appendChild(addText);
+    //this is only in the memory not in the page
+    //but you want to attach in the page you have to do this
+    document.body.appendChild(div);
+    console.log(div);
+  </script>
+</html>

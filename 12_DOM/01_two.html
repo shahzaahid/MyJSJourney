@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM</title>
+  </head>
+  <body style="background-color: #212121; color: #fff">
+    <div class="parent">
+      <div class="day">Monday</div>
+      <div class="day">Tuesday</div>
+      <div class="day">Wednesday</div>
+      <div class="day">Thursday</div>
+    </div>
+  </body>
+  <script>
+    const parent = document.querySelector(".parent");
+    console.log(parent);
+    console.log(parent.children);
+    console.log(parent.children[0]);
+    console.log(parent.children[0].innerHTML);
+
+    for (let i = 0; i < parent.children.length; i++) {
+      console.log(parent.children[i].innerHTML);
+      //the output will be NodeList(9) although you have only four
+      //elements there because it make the full tree structure
+      //every thing has a priority  line break is also considerd a line break
+    }
+
+    //the above one is very important children gives you the collection and
+    //you can use the for loop for the collection
+    console.log(parent.firstElementChild);
+    // console.log(parent.lastElementChild);
+
+    const day1 = document.querySelector(".day");
+    // console.log(day1);
+    // You can alsso from child to parent
+    console.log(day1.parentElement);
+    //the above one give you the entire parent element
+    console.log(day1.nextElementSibling);
+    //the above one is going to give you the next elemnt of the parent
+    console.log("NODE: ", parent.childNodes);
+  </script>
+</html>
