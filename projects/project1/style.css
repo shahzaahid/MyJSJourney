@@ -37,3 +37,6 @@ span {
 #purple {
   background-color: purple;
 }
+.button:hover {
+  cursor: pointer;
+}
