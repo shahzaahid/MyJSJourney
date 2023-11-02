@@ -41,6 +41,7 @@ button {
   font-size: 20px;
   border-style: none;
   margin-top: 50px;
+  cursor: pointer;
   /* margin-left: 75px; */
 }
 
@@ -72,7 +73,7 @@ button {
   box-sizing: border-box;
   text-align: center;
   width: 450px;
-  height: 600px;
+  height: 700px;
   background-color: #474747;
   color: #fff;
   font-size: 25px;
