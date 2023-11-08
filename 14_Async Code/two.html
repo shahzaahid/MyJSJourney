@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Learing</title>
+  </head>
+  <body>
+    <h1>Original Text</h1>
+    <button id="stop">Stop</button>
+  </body>
+  <script>
+    const changeMe = function () {
+      document.querySelector("h1").innerHTML =
+        "This is the new text after 2 seconds.";
+    };
+
+    const deleted = setTimeout(changeMe, 2000);
+
+    document.querySelector("#stop").addEventListener("click", function () {
+      clearTimeout(deleted);
+    });
+  </script>
+</html>

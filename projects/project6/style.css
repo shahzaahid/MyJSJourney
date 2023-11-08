@@ -1,0 +1,36 @@
+/* Style the h1 element */
+h1 {
+  font-family: "Arial", sans-serif;
+  font-size: 28px;
+  background-color: #0074e4;
+  color: #ffffff;
+  padding: 20px; /* Add padding for spacing */
+  border-radius: 15px; /* Add rounded corners */
+  display: inline-block; /* Display as inline block for background to cover the text */
+  text-align: center; /* Center align text */
+}
+
+/* Style the <bold> element (note: use <strong> instead of <bold>) */
+h1 strong {
+  font-weight: bold;
+}
+button {
+  background-color: #0074e4;
+  color: #ffffff;
+  font-size: 16px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 5px;
+}
+
+/* Style the Start button */
+#start {
+  background-color: #00cc00;
+}
+
+/* Style the Stop button */
+#stop {
+  background-color: #ff3333;
+}
