@@ -7,8 +7,9 @@ Programming pardim code ka strcuture.
 
 ### Way of styling the code.
 
-_ procedure programming
-_ OOP programming
+- procedure programming
+
+- OOP programming
 
 ### object
 
