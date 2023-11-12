@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body style="background-color: #212121">
+    <!-- xml request/ Agix request
+      Documentation of the states 
+       https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/readyState -->
+  </body>
+  <script>
+    const requestUrl = "https://api.github.com/users/shahzaahid";
+    const xhr = new XMLHttpRequest();
+    xhr.open("GET", requestUrl);
+    //continus track things
+    xhr.onreadystatechange = function () {
+      if (xhr.readyState === 4) {
+        const data = JSON.parse(this.responseText);
+        console.log(typeof data);
+        console.log(data.followers);
+        console.log(data.avatar_url);
+      }
+    };
+    //now if you want to call you have to write
+    //when yo will get the response from the url it is comming in the form of stirng most of times
+    //parse sring convert into json
+
+    xhr.send();
+
+    //console.log(xhr.readyState);
+    //when you make the request the states changes this the line use where is the state right now
+    //console.log(xhr.readyState);
+
+    /*Let me clarify the concept of asynchronous requests.
+
+In JavaScript, code execution is typically synchronous, meaning that each operation is performed one after the other in a sequential manner. However, some operations, like fetching data from an external server, can take time. If the browser were to wait for these operations to complete before moving on to the next line of code, it could result in a slow and unresponsive user experience.
+
+Asynchronous programming allows the script to continue running while waiting for certain operations to finish. In the context of the `XMLHttpRequest` object:
+
+```javascript
+xhr.open("GET", requestUrl, true);
+```
+
+The third parameter, `true`, indicates that the request should be asynchronous. This means that the script will not wait for the HTTP request to complete before moving on to the next line of code. Instead, it will continue executing code, and when the request is complete, it will trigger the `onreadystatechange` event, leading to the execution of the associated callback function.
+
+If the third parameter were `false`, it would indicate a synchronous request, and the script would wait for the request to complete before moving on. However, synchronous requests are generally discouraged because they can make the user interface unresponsive during the request.
+
+So, in simple terms, setting the request as asynchronous allows the script to keep running while waiting for the HTTP request to be processed, improving the overall responsiveness of the web page.*/
+  </script>
+</html>

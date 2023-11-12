@@ -1,0 +1,36 @@
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #212121;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.card {
+  width: 300px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.card-content {
+  padding: 20px;
+}
+.card img {
+  width: 100%;
+  max-height: 200px; /* Set the maximum height as per your preference */
+  height: auto;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+.card-content h2 {
+  margin-top: 0;
+  color: #333;
+}
+
+.card-content p {
+  color: #666;
+}

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background: #212121;
+      }
+    </style>
+  </head>
+  <body></body>
+  <script>
+    const requestUrl = "https://api.github.com/users/hiteshchoudhary";
+    const xhr = new XMLHttpRequest();
+    xhr.open("GET", requestUrl);
+    xhr.onreadystatechange = function () {
+      if (xhr.readyState === 4) {
+        console.log(this.responseText);
+        data = JSON.parse(this.responseText);
+        console.log(data.followers);
+        console.log(data.bio);
+        console.log(data.avatar_url);
+      }
+    };
+    xhr.send();
+  </script>
+</html>

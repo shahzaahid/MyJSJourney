@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GitHub User Card</title>
+    <link rel="stylesheet" href="try2.css" />
+  </head>
+  <body>
+    <div class="card" id="github-card">
+      <!-- Content will be dynamically added here -->
+    </div>
+
+    <script>
+      const requestUrl = "https://api.github.com/users/shahzaahid";
+      const xhr = new XMLHttpRequest();
+      xhr.open("GET", requestUrl, true);
+      xhr.onreadystatechange = function () {
+        if (xhr.readyState === 4 && xhr.status === 200) {
+          const data = JSON.parse(xhr.responseText);
+          updateCard(data);
+        }
+      };
+      xhr.send();
+
+      function updateCard(data) {
+        const card = document.getElementById("github-card");
+        card.innerHTML = `
+      <img src="${data.avatar_url}" alt="Profile Image">
+      <div class="card-content">
+        <h2>${data.name}</h2>
+         <p>followers: ${data.followers}</p>
+        <p>Bio: ${data.bio}</p>
+        
+      </div>
+    `;
+      }
+    </script>
+  </body>
+</html>

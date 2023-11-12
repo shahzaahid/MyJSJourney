@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background-color: #212121;
+      }
+    </style>
+  </head>
+  <body></body>
+  <script>
+    const xhr = new XMLHttpRequest();
+    const url = "https://api.github.com/users/hiteshchoudhary";
+    xhr.open("GET", url);
+    xhr.onreadystatechange = function () {
+      if (xhr.readyState === 4) {
+        let data = this.responseText;
+        console.log(typeof data);
+        //I will convert it to the json
+        data = JSON.parse(this.responseText);
+        console.log(typeof data);
+        console.log(data.followers);
+        console.log(data.bio);
+        console.log(data.name);
+        console.log(data.avatar_url);
+      }
+    };
+    xhr.send();
+  </script>
+</html>
