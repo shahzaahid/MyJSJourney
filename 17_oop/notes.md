@@ -12,15 +12,15 @@ _ OOP programming
 
 ### object
 
-\_ collection of properties and methods
+- collection of properties and methods
 
 ### why use OOP
 
-\_ Mess up code .
+- Mess up code .
 
 ### parts of OOP
 
-\_ Object literal
+- Object literal
 
 - constructor function
 - Prototypes
