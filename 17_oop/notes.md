@@ -23,7 +23,7 @@ Programming pardim code ka strcuture.
 
 - Object literal
 
-- constructor function
+- constructor function. It give you the new instance every time new we call it constructor function
 - Prototypes
 - Classes
 - Instances (new, this)
