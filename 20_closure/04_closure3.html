@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Closure</title>
+  </head>
+  <body bgcolor="#212121">
+    <button id="orange">Orange</button>
+    <button id="green">Green</button>
+  </body>
+  <script>
+    //it is very important
+    //IT HAS THIS USE CASE IT IS IN THE  BELOW
+    // document.getElementById("orange").onclick = function () {
+    //   document.body.style.backgroundColor = "orange";
+    // };
+    // document.getElementById("green").onclick = function () {
+    //   document.body.style.backgroundColor = "green";
+    // };
+    function clickHandler(color) {
+      return function () {
+        document.body.style.backgroundColor = `${color}`;
+      };
+    }
+    document.getElementById("orange").onclick = clickHandler("orange");
+    document.getElementById("green").onclick = clickHandler("green");
+  </script>
+</html>
