@@ -1,6 +1,7 @@
 //  Primitive
 
 //  7 types : String, Number, Boolearn, null, undefined, Symbol, BigInt
+//they are call by value
 
 const score = 100;
 const scoreValue = 100.3;
@@ -49,4 +50,6 @@ let myArray = ["Zahid", "Arif", "Anees"];
 //        null  => object
 //        undefined  =>  undefined
 //        Symbol  =>  symbol
-//        BigInt  =>  bigint
+//        BigInt  =>  bigint put n like 1237575756747n if you want to make it bigInt
+
+//to master the js study objects and events

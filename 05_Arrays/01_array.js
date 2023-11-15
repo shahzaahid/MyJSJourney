@@ -16,3 +16,7 @@ console.log(myArr2[2]);
 
 //calculate the length
 console.log(myArr2.length);
+
+//another way to use the array 
+const users = new Array(1, 2, 3, 4,5);
+console.log(users[0]);

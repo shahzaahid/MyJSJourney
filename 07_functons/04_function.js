@@ -38,3 +38,5 @@ console.log(user.username); // Access the "username" property and log it
 //the return keyword
 
 //whenever you are not going to use the curley you don't need to type return even for this (num1, num2)
+
+//context --> values

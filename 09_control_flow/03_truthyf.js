@@ -17,7 +17,7 @@ if (userEmail) {
 //1 false, 0, -0, BigInt 0n-> falsy null, undefined, Nan, ""
 //everything accept the above one is truthy
 //truthy values
-//1 "0", 'false', " ", [], {}, function() {}
+//1 "0", 'false', " ", [], {}, function() {}-> empty function
 
 //usermail = [1, 2,3 3]
 //check the array if(useremail.lenth === 0)

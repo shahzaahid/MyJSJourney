@@ -1,0 +1,37 @@
+Javascript Execution Context: how the js executes the js file 
+code {} -> this <-Global Execution Context 
+
+1. Global Execution Context
+2. Function Execution Context
+3. Eval Execution Context
+
+{} -> Memory Creation Phase/Creation Phase variable and things which you declare get the memory
+	  Execution Phase 
+				
+	let val1 = 10
+	let val2 = 5
+
+	function addNum(num1, num2) {
+	let total = num1 + num2
+	return total
+	}
+
+	let result1 = addNum(val1, val2)
+	let result2 = addNum(10, 2) 
+
+	now how the code is going to get execute 
+	1. Global Execution Context/Global Environment -> this allocate into this
+	2. Memory Phase/ Creatio Phase = > val1 = undefined, val2 = undefined, addNum = function defination
+	result1 = undefined, result2 = undefined ---> first phase
+	3. ExecutionPhase val1 = 10, val2 = 5, result1 = addNum =new variable environment + execution 	thread(new exetuon thread) now again there are two phases Memory phase , Execution phase 
+      Memory phase val1 = undefined, val2 = undefined 
+
+	Execution context num1 = 10, num = 5 total 15 ----> global execution context  result1 = 15 (delete)
+
+
+	call stack 
+		three() Lifo last in first out 
+		Two()
+		one()
+		Global execution 
+	      

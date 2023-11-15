@@ -27,6 +27,7 @@ console.log(myArr.indexOf(5));
 
 //****************************
 const newArr = myArr.join();
+// convert the array into string
 console.log(myArr);
 console.log(newArr);
 console.log(typeof newArr);

@@ -38,4 +38,3 @@ let score3 = 300;
 const number_array = Array.of(score1, score2, score3);
 console.log(number_array);
 //from this method I am able to make the array of individual variables
-00;

@@ -10,7 +10,7 @@ const jsUser = {
   name: "Shah Zahid",
   "full  name": "shah zahid kirmani",
   mySym: "mykey1",
-  [mySym]: "mykey2",
+  [mySym]: "mykey2", //symbol and you can only access it  with square bracket
   //actuall this is not the outside this is the string
   age: 26,
   location: "lalpora lolab",
